@@ -3,7 +3,7 @@
 ini_set("display_errors", On);
 error_reporting(E_ALL);
 //ダウンロード
-$url = 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Phalaenopsis_JPEG.jpg';
+$url = '';
 //ファイル名がJpgがチェック
 $p = preg_match('/.jpg$/', $url);
 if($p){
