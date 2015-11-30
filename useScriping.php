@@ -8,6 +8,8 @@
 //エラーを確認
 ini_set("display_errors", On);
 error_reporting(E_ALL);
+//タイムアウト制限をしない
+set_time_limit(0);
 
 //Simple HTML Domのファイルを読み込む
 require_once ('simple_html_dom.php');
@@ -52,6 +54,7 @@ for ($i = ; $i < ; $i++){
   } catch (PDOException $e) {
     $db->rollback();
     echo $e->getMessage();
+    //スクリプトを中止する、続ける場合はexitしない
     exit;
   }
   //遅延時間　連続で実行しない
